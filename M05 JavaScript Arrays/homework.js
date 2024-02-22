@@ -3,7 +3,7 @@
 function devolverPrimerElemento(array) {
    // Retornar el primer elemento del arreglo recibido por parámetro.
    // Tu código:
-   for (i = 0; i < 1; i++) {
+   for(i=0; i < 1; i++) {
       return array[i]
    }
 
@@ -25,9 +25,8 @@ function incrementarPorUno(array) {
    // El arreglo recibido por parámetro contiene números.
    // Retornar un arreglo con los elementos incrementados en +1.
    // Tu código:
-   var numMasUno = array.map((num) => num + 1)
-   return numMasUno
-
+   var result = array.map((num) => num + 1)
+   return result
 }
 
 function agregarItemAlFinalDelArray(array, elemento) {
@@ -70,7 +69,8 @@ function arrayContiene(array, elemento) {
 function agregarNumeros(arrayOfNums) {
    // El parámetro "arrayOfNums" debe ser un arreglo de números.
    // Suma todos los elementos y retorna el resultado.
-   // Tu código:
+   // Tu código
+
    var suma = 0
    for( var i = 0; i < arrayOfNums.length ; i++) {
       suma += arrayOfNums[i]
@@ -173,19 +173,20 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
-   let meses = []
 
+   let meses = []
    for (let i = 0; i < array.length; i++) {
-      if (array[i] === 'Enero' || array[i] === 'Marzo' || array[i] === 'Noviembre') {
+      if (array[i] === 'Enero' || array[i] === 'Marzo' || array[i] === 'Noviembre'){
          meses.push(array[i])
       }
    }
 
-   if (meses.length === 3) {
+   if(meses.length === 3){
       return meses
    } else {
       return 'No se encontraron los meses pedidos'
    }
+   
 }
 
 function tablaDelSeis() {
@@ -206,14 +207,15 @@ function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
-   let numMayorCien = []
-   for (let i = 0; i < array.length; i++) {
+
+   let num = []
+   for(i=0 ; i < array.length ; i++){
       if (array[i] > 100) {
-         numMayorCien.push(array[i])
+         num.push(array[i])
       }
    }
 
-   return numMayorCien
+   return num
 } 
 
 /* ----------------------------------------------------------------------------------
@@ -227,22 +229,22 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
-   let array = []
-   let suma = num
+   var arrayNum = []
+   var suma = num
 
-   for (let i = 0; i < 10; i++) {
+   for (var i = 0; i < 10; i++) {
       suma = suma + 2
       if (suma === i) {
          break
       } else {
-         array.push(suma)
+         arrayNum.push(suma)
       }
    }
 
-   if (array.length < 10) {
+   if (arrayNum.length < 10) {
       return "Se interrumpió la ejecución"
-   } else if (array.length === 10) {
-      return array
+   } else if ( arrayNum.length === 10){
+      return arrayNum
    }
 }
 
